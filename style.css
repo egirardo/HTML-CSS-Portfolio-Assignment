@@ -4,21 +4,90 @@
     --secondary-text-color: rgb(160, 159, 159);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Helvetica";
     background-color: var(--background-color);
     color: var(--primary-text-color);
+    font-size: 16px;
+}
+
+main {
+    margin: 0.7rem;
+}
+
+h1 {
+    font-size: 2rem;
 }
 
 h2 {
+    margin-top: 4rem;
     color: var(--secondary-text-color);
     font-size: 1rem;
+}
+
+
+.image-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.image-holder {
+    aspect-ratio: 1;
+    position: relative;
+    min-width: 0;
+}
+
+/* Image overlay that appears when hovered */
+.image-holder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+
+.image-holder:hover::after {
+  opacity: 1;
+}
+
+/* Text appears on hover */
+.image-holder:hover .hover-text {
+    opacity: 1;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hover-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+nav {
+    display: none;
 }
 /* Hamburger icon */
 .header-menu {
     position: absolute;
     width: 40px;
     height: 40px;
-    left: 365px;
+    right: 0;
     top: 11px;
-}    
+}
+
+
