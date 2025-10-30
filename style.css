@@ -14,3 +14,11 @@ h2 {
     color: var(--secondary-text-color);
     font-size: 1rem;
 }
+/* Hamburger icon */
+.header-menu {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 365px;
+    top: 11px;
+}    
