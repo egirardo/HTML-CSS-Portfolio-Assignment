@@ -91,4 +91,13 @@ nav {
     top: 11px;
 }
 
-
+@media screen and (min-width: 1024px) {
+    .image-container {
+    margin-top: 2rem;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    }
+}
