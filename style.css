@@ -30,8 +30,8 @@ h2 {
     font-size: 0.65rem;
 }
 
-
 .image-container {
+    margin-top: 2rem;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,7 +87,7 @@ nav {
     position: absolute;
     width: 40px;
     height: 40px;
-    right: 0;
+    right: 11px;
     top: 11px;
 }
 
