@@ -4,6 +4,16 @@
     --secondary-text-color: rgb(189, 187, 187);
 }
 
+@keyframes show-menu {
+    from {
+        transform: translateX(100vh);
+    }
+
+    to {
+        transform: 0;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -108,6 +118,9 @@ nav {
     height: 100vh;
     width: 100vw;
     background-color: var(--background-color);
+    animation-name: show-menu;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
 }
 .nav-contents {
     position: absolute;
@@ -135,6 +148,11 @@ nav p {
 
 nav section {
     margin-top: 3rem;
+}
+
+.menu-open nav {
+    width: 100vw;
+    height: 100vh;
 }
 
 @media screen and (min-width: 1024px) {
@@ -167,7 +185,7 @@ nav section {
     .menu-open nav {
         position: absolute;
         right: 0;
-        width: 25%;
+        width: 25vw;
         height: 100vh;
         border-left: solid 0.5rem rgb(34, 34, 34);
         z-index: 1;
@@ -176,9 +194,7 @@ nav section {
 
 }
 
-/* .menu-open nav {
 
-} */
 
 .menu-open .nav-contents{
     display: flex;
