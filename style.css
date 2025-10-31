@@ -10,7 +10,7 @@
     }
 
     to {
-        transform: 0;
+        transform: translateX(0);
     }
 }
 
@@ -115,12 +115,16 @@ img {
 }
 
 nav {
+    position: fixed;
     height: 100vh;
     width: 100vw;
+    z-index: 1;
     background-color: var(--background-color);
+    transform: translateX(100vw);
     animation-name: show-menu;
     animation-duration: 1.5s;
-    animation-delay: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
 }
 .nav-contents {
     position: absolute;
@@ -183,17 +187,13 @@ nav section {
 
     
     .menu-open nav {
-        position: absolute;
         right: 0;
         width: 25vw;
         height: 100vh;
         border-left: solid 0.5rem rgb(34, 34, 34);
-        z-index: 1;
     }
     
-
 }
-
 
 
 .menu-open .nav-contents{
