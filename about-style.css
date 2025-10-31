@@ -9,29 +9,24 @@
     box-sizing: border-box;
 }
 
-/* Hidden Navigation content */
+/* Hidden Navigation content, apply class="menu-open" to nav element to */
 
 .menu-button:hover {
     cursor: pointer;
 }
 
-.menu-button:active nav {
-    display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
+nav {
     height: 100vh;
     width: 100vw;
     background-color: var(--background-color);
 }
-
 .nav-contents {
     display: flex;
     flex-direction: column;
     margin-top: 20vh;
     padding-left: 2rem;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--background-color);
+    height: 100%;
+    width: 100%;
 }
 
 nav a {
