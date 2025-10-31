@@ -11,8 +11,21 @@
 
 /* Hidden Navigation content */
 
-nav {
-    display: none;
+.menu-button:hover {
+    cursor: pointer;
+}
+
+.menu-button:active nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+}
+
+.nav-contents {
+    display: flex;
     flex-direction: column;
     margin-top: 20vh;
     padding-left: 2rem;
@@ -26,7 +39,6 @@ nav a {
     color: var(--primary-text-color);
     margin-top: 1.5rem;
 }
-
 nav p {
     font-size: 1.5rem;
     color: var(--primary-text-color);
@@ -121,4 +133,39 @@ img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+/* Larger Screens */
+
+@media screen and (min-width: 1024px) {
+    .image-display {
+        position: relative;
+        display:flex;
+        height: 80vh;
+        width: 100vw;
+        justify-content: center;
+        align-self: center;
+    }
+
+    img {
+        justify-self: center;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    article {
+        justify-content: center;
+    }
+
 }
